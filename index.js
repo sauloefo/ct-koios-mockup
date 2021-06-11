@@ -26,5 +26,7 @@ var odataServer = ODataServer("http://localhost:1337")
 let portNumber = process.env.PORT;
 
 if (!portNumber) portNumber = 1337
+
+console.log(`Listening on port ${portNumber}.`);
  
 http.createServer(odataServer.handle.bind(odataServer)).listen(portNumber);
