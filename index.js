@@ -26,6 +26,7 @@ if (!portNumber) portNumber = 1337
 var odataServer = ODataServer(`http://localhost:${portNumber}`)
     .model(model)
     .adapter(Adapter(function(es, cb) { cb(null, db)}));
+odataServer.cors('*');
  
 console.log(`Listening on port ${portNumber}.`);
  
