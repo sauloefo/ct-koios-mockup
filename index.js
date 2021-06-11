@@ -23,11 +23,15 @@ let portNumber = process.env.PORT;
 
 if (!portNumber) portNumber = 1337
 
-var odataServer = ODataServer(`http://localhost:${portNumber}`)
-    .model(model)
-    .adapter(Adapter(function(es, cb) { cb(null, db)}));
-odataServer.cors('*');
- 
-console.log(`Listening on port ${portNumber}.`);
- 
-http.createServer(odataServer.handle.bind(odataServer)).listen(portNumber);
+db.insert({ id:1, test: "Test users !!!!"}, () => {
+    var odataServer = ODataServer(`http://localhost:${portNumber}`)
+        .model(model)
+        .adapter(Adapter(function(es, cb) { cb(null, db)}));
+
+    odataServer.cors('*');
+    
+    console.log(`Listening on port ${portNumber}.`);
+    
+    http.createServer(odataServer.handle.bind(odataServer)).listen(portNumber);
+});
+
