@@ -5,10 +5,11 @@ var ODataServer = require('simple-odata-server');
 var Adapter = require('simple-odata-server-nedb');
  
 var model = {
+    default: true,
     namespace: "koios",
     entityTypes: {
         "UserType": {
-            "_id": {"type": "Edm.String", key: true},
+            "id": {"type": "Edm.String", key: true},
             "test": {"type": "Edm.String"},            
         }
     },   
