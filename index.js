@@ -5,7 +5,6 @@ var ODataServer = require('simple-odata-server');
 var Adapter = require('simple-odata-server-nedb');
  
 var model = {
-    namespace: "jsreport",
     entityTypes: {
         "UserType": {
             "_id": {"type": "Edm.String", key: true},
@@ -14,19 +13,19 @@ var model = {
     },   
     entitySets: {
         "users": {
-            entityType: "jsreport.UserType"
+            entityType: "UserType"
         }
     }
 };
- 
-var odataServer = ODataServer("http://localhost:1337")
-    .model(model)
-    .adapter(Adapter(function(es, cb) { cb(null, db)}));
- 
+
 let portNumber = process.env.PORT;
 
 if (!portNumber) portNumber = 1337
 
+var odataServer = ODataServer(`http://localhost:${portNumber}`)
+    .model(model)
+    .adapter(Adapter(function(es, cb) { cb(null, db)}));
+ 
 console.log(`Listening on port ${portNumber}.`);
  
 http.createServer(odataServer.handle.bind(odataServer)).listen(portNumber);
