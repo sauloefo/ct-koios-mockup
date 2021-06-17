@@ -10,7 +10,7 @@ var model = {
     entityTypes: {
         "UserType": {
             "id": {"type": "Edm.String", key: true},
-            "test": {"type": "Edm.String"},            
+            "name": {"type": "Edm.String"},            
         }
     },   
     entitySets: {
