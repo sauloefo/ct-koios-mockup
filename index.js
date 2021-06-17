@@ -9,7 +9,7 @@ var model = {
     namespace: "koios",
     entityTypes: {
         "UserType": {
-            "id": {"type": "Edm.String", key: true},
+            "_id": {"type": "Edm.String", key: true},
             "name": {"type": "Edm.String"},            
         }
     },   
