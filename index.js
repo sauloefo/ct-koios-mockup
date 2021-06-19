@@ -6,7 +6,6 @@ var Adapter = require('simple-odata-server-nedb');
  
 var model = {
   namespace: "NorthwindModel",
-  containerName: "NorthwindEntities",
   entityTypes: {
       "Category": {
           "CategoryID": {
