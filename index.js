@@ -1,7 +1,7 @@
 var http = require('http');
 var Datastore = require('nedb');
 var db = new Datastore( { inMemoryOnly: true });
-var ODataServer = require('simple-odata-server');
+var ODataServer = require('./odata-server');
 var Adapter = require('simple-odata-server-nedb');
  
 var model = {

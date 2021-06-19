@@ -12,6 +12,6 @@
   "dependencies": {
     "nedb": "^1.8.0",
     "simple-odata-server-nedb": "^1.0.0",
-    "simple-odata-server": "file:../node-simple-odata-server"
+    "simple-odata-server": "^1.1.1"
   }
 }
