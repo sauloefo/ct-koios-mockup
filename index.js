@@ -20,15 +20,17 @@ var model = {
     }
 };
 
-console.info(`HEROKU_APP_NAME: ${process.env.HEROKU_APP_NAME}`);
+const portNumber = process.env.PORT || 1337;
 
-let portNumber = process.env.PORT;
-if (!portNumber) portNumber = 1337
-console.log(`Listening on port ${portNumber}.`);
+const appDomain = process.env.APP_DOMAIN || `localhost:${portNumber}`;
 
-var odataServer = ODataServer(`http://localhost:${portNumber}`)
+const appUrl = `http://${appDomain}`;
+
+var odataServer = ODataServer(appUrl)
     .model(model)
     .adapter(Adapter(function(es, cb) { cb(null, db)}));
 odataServer.cors('*');
+
+console.info(`OData service starting at ${appUrl}`);
  
 http.createServer(odataServer.handle.bind(odataServer)).listen(portNumber);
