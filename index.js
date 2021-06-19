@@ -48,7 +48,7 @@ const appUrl = `http://${appDomain}`;
 
 var odataServer = ODataServer(appUrl)
     .model(model)
-    .adapter(Adapter(function(es, cb) { cb(null, db)}));
+    .adapter(Adapter(function(entitySetName, cb) { cb(null, db); }));
 odataServer.cors('*');
 
 console.info(`OData service starting at ${appUrl}`);
