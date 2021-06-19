@@ -5,19 +5,18 @@ var ODataServer = require('simple-odata-server');
 var Adapter = require('simple-odata-server-nedb');
  
 var model = {
-    default: true,
-    namespace: "koios",
-    entityTypes: {
-        "UserType": {
-            "_id": {"type": "Edm.String", key: true},
-            "name": {"type": "Edm.String"},            
-        }
-    },   
-    entitySets: {
-        "users": {
-            entityType: "koios.UserType"
-        }
-    }
+  namespace: "jsreport",
+  entityTypes: {
+      "UserType": {
+          "_id": {"type": "Edm.String", key: true},
+          "test": {"type": "Edm.String"},            
+      }
+  },   
+  entitySets: {
+      "users": {
+          entityType: "jsreport.UserType"
+      }
+  }
 };
 
 const portNumber = process.env.PORT || 1337;
