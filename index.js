@@ -13,7 +13,7 @@ var model = {
       }
   },   
   entitySets: {
-      "users": {
+      "Users": {
           entityType: "jsreport.UserType"
       }
   }
