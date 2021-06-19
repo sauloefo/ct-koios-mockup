@@ -10,14 +10,14 @@ var model = {
       "Category": {
           "CategoryID": {
             "type": "Edm.Int32",
-            key: true,
-            nullable: false,
+            "key": true,
+            "nullable": false,
             "p5:StoreGeneratedPattern": "Identity"
           },
           "CategoryName": {
             "type": "Edm.String",
-            nullable: false,
-            maxLength: 15
+            "nullable": false,
+            "maxLength": 15
           },            
       }
   },   
