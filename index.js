@@ -11,7 +11,7 @@ var model = {
           "CategoryID": {
             "type": "Edm.Int32",
             "key": true,
-            "nullable": false,
+            "nullable": true,
             "p5:StoreGeneratedPattern": "Identity"
           },
           "CategoryName": {
