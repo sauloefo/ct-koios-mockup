@@ -8,7 +8,7 @@ var model = {
   namespace: "koios",
   entityTypes: {
       "Booking": {
-          "Booking_Id": { "type": "Edm.String", key: true },
+          "_id": { "type": "Edm.String", key: true },
           "Booking_Status": { "type": "Edm.String" },
           "BookingDate": { "type": "Edm.DateTimeOffset" },
           "brand_type": { "type": "Edm.String" },
