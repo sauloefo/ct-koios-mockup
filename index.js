@@ -5,16 +5,25 @@ var ODataServer = require('simple-odata-server');
 var Adapter = require('simple-odata-server-nedb');
  
 var model = {
-  namespace: "jsreport",
+  namespace: "NorthwindModel",
   entityTypes: {
-      "UserType": {
-          "_id": {"type": "Edm.String", key: true},
-          "test": {"type": "Edm.String"},            
+      "Category": {
+          "CategoryID": {
+            "type": "Edm.Int32",
+            key: true,
+            nullable: false,
+            "p5:StoreGeneratedPattern": "Identity"
+          },
+          "CategoryName": {
+            "type": "Edm.String",
+            nullable: false,
+            maxLength: 15
+          },            
       }
   },   
   entitySets: {
-      "Users": {
-          entityType: "jsreport.UserType"
+      "Categories": {
+          entityType: "NorthwindModel.Category"
       }
   }
 };
