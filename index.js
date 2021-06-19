@@ -20,6 +20,8 @@ var model = {
     }
 };
 
+console.info(`HEROKU_APP_NAME: ${process.env.HEROKU_APP_NAME}`);
+
 let portNumber = process.env.PORT;
 if (!portNumber) portNumber = 1337
 console.log(`Listening on port ${portNumber}.`);
