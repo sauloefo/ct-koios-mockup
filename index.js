@@ -5,16 +5,36 @@ var ODataServer = require('./odata-server');
 var Adapter = require('simple-odata-server-nedb');
  
 var model = {
-  namespace: "jsreport",
+  namespace: "koios",
   entityTypes: {
-      "UserType": {
-          "_id": {"type": "Edm.String", key: true},
-          "test": {"type": "Edm.String"},            
+      "Booking": {
+          "Booking_Id": { "type": "Edm.String", key: true },
+          "Booking_Status": { "type": "Edm.String" },
+          "BookingDate": { "type": "Edm.DateTimeOffset" },
+          "brand_type": { "type": "Edm.String" },
+          "card_number": { "type": "Edm.String" },
+          "client_id": { "type": "Edm.Int32" },
+          "Country_of_Residence": { "type": "Edm.String" },
+          "customer_email": { "type": "Edm.String" },
+          "customer_first_name": { "type": "Edm.String" },
+          "customer_id": { "type": "Edm.Int32" },
+          "customer_last_name": { "type": "Edm.String" },
+          "Email": { "type": "Edm.String" },
+          "FirstName": { "type": "Edm.String" },
+          "Pickup_Date": { "type": "Edm.DateTimeOffset" },
+          "pickup_location_name": { "type": "Edm.String" },
+          "Pickup_Time": { "type": "Edm.String" },
+          "ref": { "type": "Edm.Int32" },
+          "searchable_Email": { "type": "Edm.String" },
+          "searchable_supplier_ref": { "type": "Edm.String" },
+          "Supplier_Name": { "type": "Edm.String" },
+          "Supplier_Reference": { "type": "Edm.String" },
+          "Surname": { "type": "Edm.String" }
       }
   },   
   entitySets: {
-      "users": {
-          entityType: "jsreport.UserType"
+      "SalesForce_Bookings": {
+          entityType: "koios.Booking"
       }
   }
 };
