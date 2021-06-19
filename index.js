@@ -14,12 +14,7 @@ var model = {
             "key": true,
             "nullable": false,
             "p5:StoreGeneratedPattern": "Identity"
-          },
-          "CategoryName": {
-            "type": "Edm.String",
-            "nullable": false,
-            "maxLength": 15
-          },            
+          }         
       }
   },   
   entitySets: {
