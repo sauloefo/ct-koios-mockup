@@ -9,6 +9,7 @@ var model = {
   entityTypes: {
       "Booking": {
           "_id": { "type": "Edm.String", key: true },
+          "Booking_id": { "type": "Edm.String" },
           "Booking_Status": { "type": "Edm.String" },
           "BookingDate": { "type": "Edm.DateTimeOffset" },
           "brand_type": { "type": "Edm.String" },
