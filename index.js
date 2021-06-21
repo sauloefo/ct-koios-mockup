@@ -31,11 +31,18 @@ var model = {
           "Supplier_Name": { "type": "Edm.String" },
           "Supplier_Reference": { "type": "Edm.String" },
           "Surname": { "type": "Edm.String" }
+      },
+      "Person": {
+        "_id": { "type": "Edm.String", key: true },
+        "Name": { "type": "Edm.String" }
       }
   },   
   entitySets: {
       "SalesForce_Bookings": {
           entityType: "koios.Booking"
+      },
+      "People": {
+          entityType: "koios.Person"
       }
   }
 };
