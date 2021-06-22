@@ -1,8 +1,8 @@
 var http = require('http');
-var Datastore = require('./datastore');
+var Datastore = require('nedb');
 var db = new Datastore( { inMemoryOnly: true });
 var ODataServer = require('./odata-server');
-var Adapter = require('simple-odata-server-nedb');
+var Adapter = require('./nedb-adapter');
  
 var model = {
   namespace: "koios",
