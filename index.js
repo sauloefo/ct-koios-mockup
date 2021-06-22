@@ -63,6 +63,9 @@ db.insert({ Name: "Saulo", Age: 37 });
 db.insert({ Name: "Hugo", Age: 36 });
 db.insert({ Name: "Paula", Age: 34 });
 db.insert({ Name: "Guilherme", Age: 37 });
+db.insert({ Name: "Debora", Age: 34 });
+db.insert({ Name: "Selma", Age: 62 });
+db.insert({ Name: "Paulo", Age: 65 });
 
 console.info(`OData service starting at ${appUrl}`);
  
