@@ -34,7 +34,8 @@ var model = {
       },
       "Person": {
         "_id": { "type": "Edm.String", key: true },
-        "Name": { "type": "Edm.String" }
+        "Name": { "type": "Edm.String" },
+        "Age": { "type": "Edm.Int32" }
       }
   },   
   entitySets: {
@@ -57,6 +58,11 @@ var odataServer = ODataServer(appUrl)
     .model(model)
     .adapter(Adapter(function(entitySetName, cb) { cb(null, db); }));
 odataServer.cors('*');
+
+db.insert({ Name: "Saulo", Age: 37 });
+db.insert({ Name: "Hugo", Age: 36 });
+db.insert({ Name: "Paula", Age: 34 });
+db.insert({ Name: "Guilherme", Age: 37 });
 
 console.info(`OData service starting at ${appUrl}`);
  
