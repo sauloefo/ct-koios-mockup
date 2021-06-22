@@ -11,7 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "nedb": "^1.8.0",
-    "simple-odata-server-nedb": "^1.0.0",
+    "simple-odata-server-nedb": "git://github.com/forcexp/node-simple-odata-server-nedb.git",
     "simple-odata-server": "git://github.com/forcexp/node-simple-odata-server.git"
   }
 }
